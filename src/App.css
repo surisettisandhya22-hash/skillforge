@@ -1,0 +1,10 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page content wrapper to push footer down */
+.page-content {
+  flex: 1;
+}

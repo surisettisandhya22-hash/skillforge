@@ -1,0 +1,63 @@
+.custom-navbar {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  /* Override background for glassmorphism */
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1030;
+}
+
+.brand-logo {
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-item-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: color var(--transition-fast);
+  padding-bottom: 4px;
+}
+
+.nav-item-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: var(--primary);
+  transition: width var(--transition-fast), left var(--transition-fast);
+}
+
+.nav-item-link:hover {
+  color: var(--primary) !important;
+}
+
+.nav-item-link:hover::after,
+.nav-item-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-item-link.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
