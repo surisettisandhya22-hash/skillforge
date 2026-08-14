@@ -9,13 +9,13 @@ import { getStorage } from "firebase/storage";
 // 3. Under "Your apps", select the Web app (or add a new one)
 // 4. Copy the firebaseConfig object and paste it below
 const firebaseConfig = {
-  apiKey: "AIzaSyATOgCQg3bOSepbsBEq84C3TrLykgEGzy0",
-  authDomain: "skillforge-a89a7.firebaseapp.com",
-  projectId: "skillforge-a89a7",
-  storageBucket: "skillforge-a89a7.firebasestorage.app",
-  messagingSenderId: "918090128873",
-  appId: "1:918090128873:web:c79b7500469cd25e27ff78",
-  measurementId: "G-CSYC8EW9LJ"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
